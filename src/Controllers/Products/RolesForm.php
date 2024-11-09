@@ -38,8 +38,7 @@ class RolesForm extends PublicController{
         if(isset($_GET["mode"]) && isset($this->modeDscArr[$_GET["mode"]])){
             $this ->mode =$_GET["mode"];
         }else{
-            print_r("mode",$this->mode);
-            Site::redirectToWithMsg("index.php?page=products-rolesList","No cargo el mode");
+            Site::redirectToWithMsg("index.php?page=products-rolesList","Algo sucedio mal! intente de nuevo");
             die();
         }
 
@@ -58,7 +57,7 @@ class RolesForm extends PublicController{
     
     $this->rol["rolescod"]=$_POST["rolescod"];
     $this->rol["rolesdsc"]=$_POST["rolesdsc"];
-    $this->rol["rolesest"]=intval($_POST["rolesest"]);
+    $this->rol["rolesest"]=$_POST["rolesest"];
     
  
     }

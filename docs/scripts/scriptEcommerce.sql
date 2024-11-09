@@ -106,7 +106,8 @@ CREATE TABLE
             `userest`
         )
     ) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8;
-
+use ecommerce;
+alter table `roles` modify COLUMN rolescod int;
 CREATE TABLE
     `roles` (
         `rolescod` varchar(128) NOT NULL,

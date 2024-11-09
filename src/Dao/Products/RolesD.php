@@ -19,14 +19,18 @@ class RolesD extends Table{
     }
 
     public static function agregarRoles($rol){
-        unset($rol['rolescod']);
+        
+        //unset($rol['rolescod']);
         unset($rol['creado']);
         unset($rol['actualizado']);
+        
+
         $sqlstr='insert into roles (
             rolescod,rolesdsc,rolesest) values
         (
-            :rolescod, :rolesdsc, :rolesest
+            :rolescod,:rolesdsc,:rolesest
         );';
+        
         return self::executeNonQuery($sqlstr,$rol);
     }
 

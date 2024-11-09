@@ -16,9 +16,9 @@
                     <td>{{rolesdsc}}</td>
                     <td>{{rolesest}}</td>
                     <td style="display: flex; gap:1rem; justify-content:center; align-items:center;">
-                        <a href="index.php?page=products-rolesForm&mode=UPD&id_pelicula={{rolescod}}"> <i class="fa-solid fa-file-pen"></i></a>
-                        <a href="index.php?page=products-rolesForm&mode=DEL&id_pelicula={{rolescod}}"> <i class="fa-solid fa-trash"></i></i></a>
-                        <a href="index.php?page=products-rolesForm&mode=DSP&id_pelicula={{rolescod}}"> <i class="fa-solid fa-eye"></i></a>
+                        <a href="index.php?page=products-rolesForm&mode=UPD&rolescod={{rolescod}}"> <i class="fa-solid fa-file-pen"></i></a>
+                        <a href="index.php?page=products-rolesForm&mode=DEL&rolescod={{rolescod}}"> <i class="fa-solid fa-trash"></i></i></a>
+                        <a href="index.php?page=products-rolesForm&mode=DSP&rolescod={{rolescod}}"> <i class="fa-solid fa-eye"></i></a>
                     </td>
                 </tr>
             {{endfor roles}}
