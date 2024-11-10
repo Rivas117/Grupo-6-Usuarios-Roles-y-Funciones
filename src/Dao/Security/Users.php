@@ -120,3 +120,5 @@ class Users extends Table {
         );
     }
 }
+
+?>
