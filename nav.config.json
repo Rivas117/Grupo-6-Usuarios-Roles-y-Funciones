@@ -17,8 +17,13 @@
     },
     {
       "id": "Menu_Products",
-      "nav_url": "index.php?page=Products-rolesForm&mode=UPD&rolescod=Administrador",
-      "nav_label":"<i class=\"fas fa-table\"></i>&nbsp;Usuarios, Roles y Funciones"
+      "nav_url": "index.php?page=Products-rolesList&mode=UPD&rolescod=Administrador",
+      "nav_label":"<i class=\"fas fa-table\"></i>&nbsp;Roles"
+    },
+    {
+      "id": "Menu_Products",
+      "nav_url": "index.php?page=Security-UsersList&mode=UPD&rolescod=Administrador",
+      "nav_label":"<i class=\"fas fa-table\"></i>&nbsp;Usuarios"
     }
   ],
   "private": [
