@@ -1,7 +1,7 @@
 <?php
 namespace Dao\Security;
 
-use Dao\Table; 
+use Dao\Table;
 
 class Users extends Table {
     public static function getAllUsers() {
@@ -43,7 +43,7 @@ class Users extends Table {
 
     public static function insertUser($username, $useremail, $userpswd, $userest, $usertipo) {
         // Verificar si el email ya existe
-        if(self::getUserByEmail($useremail)) {
+        if (self::getUserByEmail($useremail)) {
             throw new \Exception("El correo electrónico ya está registrado");
         }
 
@@ -70,7 +70,7 @@ class Users extends Table {
     public static function updateUser($usercod, $username, $useremail, $userest, $usertipo) {
         // Verificar si el email ya existe para otro usuario
         $existingUser = self::getUserByEmail($useremail);
-        if($existingUser && $existingUser["usercod"] != $usercod) {
+        if ($existingUser && $existingUser["usercod"] != $usercod) {
             throw new \Exception("El correo electrónico ya está registrado por otro usuario");
         }
 
@@ -105,7 +105,7 @@ class Users extends Table {
                 $password, 
                 \Utilities\Context::getContextByKey("PWD_HASH")
             ),
-            PASSWORD_ALGORITHM
+            PASSWORD_BCRYPT // Cambiado a PASSWORD_BCRYPT
         );
     }
 
