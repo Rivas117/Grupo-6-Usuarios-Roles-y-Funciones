@@ -66,6 +66,11 @@ class UserForm extends PublicController {
                 || !isset($_POST["usertipo"])) {
                 throw new \Exception("Formulario incompleto");
             }
+
+            // Validación de correo electrónico
+            if (!filter_var($_POST["useremail"], FILTER_VALIDATE_EMAIL)) {
+                throw new \Exception("Correo electrónico no válido");
+            }
     
             // Capturar datos del formulario
             $this->user = [
@@ -87,10 +92,10 @@ class UserForm extends PublicController {
     
             // En modo insertar necesitamos la contraseña
             if ($this->mode === "INS") {
-                if (!isset($_POST["userpswd"])) {
+                if (!isset($_POST["userpswd"]) || empty(trim($_POST["userpswd"]))) {
                     throw new \Exception("Contraseña requerida");
                 }
-                $this->user["userpswd"] = $_POST["userpswd"];
+                $this->user["userpswd"] = password_hash($_POST["userpswd"], PASSWORD_BCRYPT);
             }
     
             // Procesar según el modo
@@ -108,6 +113,8 @@ class UserForm extends PublicController {
                             "index.php?page=Security_UsersList",
                             "Usuario creado exitosamente"
                         );
+                    } else {
+                        throw new \Exception("Error al crear el usuario");
                     }
                     break;
                 
@@ -124,6 +131,8 @@ class UserForm extends PublicController {
                             "index.php?page=Security_UsersList",
                             "Usuario actualizado exitosamente"
                         );
+                    } else {
+                        throw new \Exception("Error al actualizar el usuario");
                     }
                     break;
     
@@ -134,6 +143,8 @@ class UserForm extends PublicController {
                             "index.php?page=Security_UsersList",
                             "Usuario eliminado exitosamente"
                         );
+                    } else {
+                        throw new \Exception("Error al eliminar el usuario");
                     }
                     break;
             }
@@ -168,3 +179,4 @@ class UserForm extends PublicController {
     }
 }
 ?>
+
