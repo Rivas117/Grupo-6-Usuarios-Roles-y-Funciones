@@ -8,7 +8,7 @@
                 <th>Nombre</th>
                 <th>Estado</th>
                 <th>Tipo</th>
-                <th><a href="index.php?page=Security_UserForm&mode=INS" class="btn w32"><i class="fas fa-plus"></i></a></th>
+                <th><a href="index.php?page=Security_UserForm&mode=INS"><i class="fas fa-plus"></i></a></th>
             </tr>
         </thead>
         <tbody>
@@ -20,13 +20,13 @@
                 <td>{{userest}}</td>
                 <td>{{usertipo}}</td>
                 <td class="center">
-                    <a href="index.php?page=Security_UserForm&mode=UPD&usercod={{usercod}}" class="btn w32">
+                    <a href="index.php?page=Security_UserForm&mode=UPD&usercod={{usercod}}">
                         <i class="fas fa-edit"></i>
                     </a>
-                    <a href="index.php?page=Security_UserForm&mode=DEL&usercod={{usercod}}" class="btn w32">
+                    <a href="index.php?page=Security_UserForm&mode=DEL&usercod={{usercod}}">
                         <i class="fas fa-trash"></i>
                     </a>
-                    <a href="index.php?page=Security_UserForm&mode=DSP&usercod={{usercod}}" class="btn w32">
+                    <a href="index.php?page=Security_UserForm&mode=DSP&usercod={{usercod}}">
                         <i class="fas fa-eye"></i>
                     </a>
                 </td>

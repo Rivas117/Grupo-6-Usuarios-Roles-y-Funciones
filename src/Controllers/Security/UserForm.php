@@ -1,12 +1,12 @@
 <?php
 namespace Controllers\Security;
 
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Views\Renderer;
 use Utilities\Site;
 use Dao\Security\Users as DaoUsers;
 
-class UserForm extends PublicController {
+class UserForm extends PrivateController {
     private $viewData = [];
     private $mode = 'INS';
     private $modeDsc = [

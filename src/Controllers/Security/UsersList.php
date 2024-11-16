@@ -1,11 +1,11 @@
 <?php 
 namespace Controllers\Security;
 
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Dao\Security\Users as UsersDao;
 use Views\Renderer;
 
-class UsersList extends PublicController {
+class UsersList extends PrivateController {
     public function run(): void {
         $viewData = array();
         $users = UsersDao::getAllUsers();

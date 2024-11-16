@@ -9,11 +9,24 @@
       "id": "Menu_SignUp",
       "nav_url": "index.php?page=Sec_Register",
       "nav_label":"<i class=\"fas fa-sign-in-alt\"></i>&nbsp;Crear Cuenta"
+    }
+    
+  ],
+  "private": [
+    {
+      "id":"Menu_PaymentCheckout",
+      "nav_url": "index.php?page=Checkout_Checkout",
+      "nav_label": "Carretilla de Compra"
     },
     {
       "id": "Menu_Products",
       "nav_url": "index.php?page=Products_Products",
       "nav_label":"<i class=\"fas fa-table\"></i>&nbsp;WW Productos"
+    },
+    {
+      "id": "Menu_Products",
+      "nav_url": "index.php?page=Carros-CarrosList&mode=UPD&rolescod=Administrador",
+      "nav_label":"<i class=\"fas fa-table\"></i>&nbsp;Carros"
     },
     {
       "id": "Menu_Products",
@@ -27,15 +40,8 @@
     },
     {
       "id": "Menu_Products",
-      "nav_url": "index.php?page=Security-FuncionesList&mode=UPD&rolescod=Administrador",
+      "nav_url": "index.php?page=Funciones-FuncionesList&mode=UPD&rolescod=Administrador",
       "nav_label":"<i class=\"fas fa-table\"></i>&nbsp;Funciones"
-    }
-  ],
-  "private": [
-    {
-      "id":"Menu_PaymentCheckout",
-      "nav_url": "index.php?page=Checkout_Checkout",
-      "nav_label": "Carretilla de Compra"
     }
   ]
 }

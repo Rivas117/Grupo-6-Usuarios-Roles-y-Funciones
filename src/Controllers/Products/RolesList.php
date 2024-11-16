@@ -1,11 +1,11 @@
 <?php 
 namespace Controllers\Products;
 
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Dao\Products\RolesD;
 use Views\Renderer;
 
-class RolesList extends PublicController{
+class RolesList extends PrivateController{
     public function run(): void{
         $rolesD=RolesD::obtenerRoles();
         $viewRoles=[];

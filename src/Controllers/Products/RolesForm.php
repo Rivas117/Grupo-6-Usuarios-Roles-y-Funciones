@@ -2,13 +2,13 @@
 
 namespace Controllers\Products;
 
-use Controllers\PublicController;
+use Controllers\PrivateController;
 use Utilities\Site;
 use Views\Renderer;
 use Dao\Products\RolesD;
 
 
-class RolesForm extends PublicController{
+class RolesForm extends PrivateController{
     private $viewData=[];
     private $modeDscArr=[
         "INS"=>"Crear nuevo Rol",
