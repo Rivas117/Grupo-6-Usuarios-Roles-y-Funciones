@@ -24,6 +24,11 @@
       "id": "Menu_Products",
       "nav_url": "index.php?page=Security-UsersList&mode=UPD&rolescod=Administrador",
       "nav_label":"<i class=\"fas fa-table\"></i>&nbsp;Usuarios"
+    },
+    {
+      "id": "Menu_Products",
+      "nav_url": "index.php?page=Security-FuncionesList&mode=UPD&rolescod=Administrador",
+      "nav_label":"<i class=\"fas fa-table\"></i>&nbsp;Funciones"
     }
   ],
   "private": [
